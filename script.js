@@ -10,23 +10,22 @@ let masterSongName = document.getElementById('masterSongName');
 let songItems = Array.from(document.getElementsByClassName('songItem'));
 
 let songs = [
-    {songName: "Warriyo - Mortals [NCS Release]", filePath: "songs/1.mp3", coverPath: "covers/1.jpg"},
-    {songName: "Cielo - Huma-Huma", filePath: "songs/2.mp3", coverPath: "covers/2.jpg"},
-    {songName: "DEAF KEV - Invincible [NCS Release]-320k", filePath: "songs/3.mp3", coverPath: "covers/3.jpg"},
-    {songName: "Different Heaven & EH!DE - My Heart [NCS Release]", filePath: "songs/4.mp3", coverPath: "covers/4.jpg"},
-    {songName: "Janji-Heroes-Tonight-feat-Johnning-NCS-Release", filePath: "songs/5.mp3", coverPath: "covers/5.jpg"},
-    {songName: "Rabba - Salam-e-Ishq", filePath: "songs/2.mp3", coverPath: "covers/6.jpg"},
-    {songName: "Sakhiyaan - Salam-e-Ishq", filePath: "songs/2.mp3", coverPath: "covers/7.jpg"},
-    {songName: "Bhula Dena - Salam-e-Ishq", filePath: "songs/2.mp3", coverPath: "covers/8.jpg"},
-    {songName: "Tumhari Kasam - Salam-e-Ishq", filePath: "songs/2.mp3", coverPath: "covers/9.jpg"},
-    {songName: "Na Jaana - Salam-e-Ishq", filePath: "songs/4.mp3", coverPath: "covers/10.jpg"},
+    {songName: "Dard-e-Disco", filePath: "songs/1.mp3", coverPath: "covers/1.jpg"},
+    {songName: "Do Dhari Talwar", filePath: "songs/2.mp3", coverPath: "covers/2.jpg"},
+    {songName: "Hoth Rashiley ", filePath: "songs/3.mp3", coverPath: "covers/3.jpg"},
+    {songName: "Kesariya", filePath: "songs/4.mp3", coverPath: "covers/4.jpg"},
+    {songName: "Kiya-Kiya", filePath: "songs/5.mp3", coverPath: "covers/5.jpg"},
+    {songName: "Madubala", filePath: "songs/2.mp3", coverPath: "covers/6.jpg"},
+    {songName: "Thanedaar", filePath: "songs/2.mp3", coverPath: "covers/7.jpg"},
+    {songName: "Mera-yaar", filePath: "songs/2.mp3", coverPath: "covers/8.jpg"},
+    {songName: "Teri-Ore", filePath: "songs/2.mp3", coverPath: "covers/9.jpg"},
+    {songName: "you'r my love ", filePath: "songs/4.mp3", coverPath: "covers/10.jpg"},
 ]
 
 songItems.forEach((element, i)=>{ 
     element.getElementsByTagName("img")[0].src = songs[i].coverPath; 
     element.getElementsByClassName("songName")[0].innerText = songs[i].songName; 
 })
- 
 
 // Handle play/pause click
 masterPlay.addEventListener('click', ()=>{
@@ -43,6 +42,7 @@ masterPlay.addEventListener('click', ()=>{
         gif.style.opacity = 0;
     }
 })
+
 // Listen to Events
 audioElement.addEventListener('timeupdate', ()=>{ 
     // Update Seekbar
@@ -90,7 +90,6 @@ document.getElementById('next').addEventListener('click', ()=>{
     audioElement.play();
     masterPlay.classList.remove('fa-play-circle');
     masterPlay.classList.add('fa-pause-circle');
-
 })
 
 document.getElementById('previous').addEventListener('click', ()=>{
@@ -107,7 +106,5 @@ document.getElementById('previous').addEventListener('click', ()=>{
     masterPlay.classList.remove('fa-play-circle');
     masterPlay.classList.add('fa-pause-circle');
 })
-
-
 
 
